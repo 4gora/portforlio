@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 
+/* variáveis */
 :root {
   --background-color: #0a192f;
 }
@@ -9,6 +10,32 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
+}
+
+/* barra de rolagem */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.45rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+  border-radius: 10px;
+  margin: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid var(--background-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  cursor: pointer;
 }
 
 body {
@@ -24,10 +51,10 @@ a {
 header {
   background-color: #0a192fbb;
   backdrop-filter: blur(15px);
+  box-shadow: 0 3px 1px -2px black;
   position: fixed;
   top: 0;
   width: 100%;
-  box-shadow: 0 3px 1px -2px black;
   z-index: 1000;
   transition: top 0.3s ease-in-out;
 }
@@ -51,7 +78,7 @@ nav {
     width: 34px;
     height: auto;
     filter: invert(1);
-  }  
+  }
 
   ul {
     display: flex;
@@ -61,16 +88,34 @@ nav {
   }
 }
 
-#inicio,
-#inicioWrapper, #sobreWrapper {
+/* Classes */
+.flexCentralizado {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.sectionTitle {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Início */
 #inicio {
   height: 100vh;
   padding-top: 60px;
+}
+
+/* Wrappers */
+
+#sobreWrapper,
+#formacaoWrapper,
+#projetosWrapper,
+#contatoWrapper {
+  flex-direction: column;
+  width: 70vw;
+  margin: 10px;
+
 }
 
 #inicioWrapper {
@@ -94,23 +139,96 @@ nav {
 }
 
 /* Sobre */
-
-
-#sobreIcons {
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-
-    img {
-        width: 50px;
-        height: 50px;
-        margin: 10px;
-    }
+#sobre {
+  height: 70vh;
 }
 
-#sobreWrapper {
-    flex-direction: column;
-    width: 70vw;
-    margin: 0 auto;
+#sobreIcons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+
+  img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+}
+
+
+
+/* Formação */
+
+#formacao {
+  height: 70vh;
+}
+
+/* Projetos */
+
+#projetos {
+}
+
+
+
+#projetosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  margin: 0 auto;
+  width: 70vw;
+  text-align: center;
+
+  img {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+/* Contato */
+#contato {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contato form {
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  gap: 1em;
+}
+
+#contato input,
+#contato textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+}
+
+#contato input:focus,
+#contato textarea:focus {
+  outline: none;
+  border-color: #888;
+}
+
+#contato button {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #888;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contato button:hover {
+  background-color: #555;
 }

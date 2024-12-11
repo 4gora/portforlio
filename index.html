@@ -7,23 +7,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--
+    Aluno: Alessandro Guilherme do Rosario
+    RU: 3766827
+    -->
+
+    <!-- Header e barra de navegação -->    
     <header>
       <nav>
         <a href="index.html">
-          <img src="assets/icons/logoalessandro2.png" alt="Logo">
+          <img src="assets/icons/logoalessandro2.png" alt="Logo" />
         </a>
         <ul id="navbar_links">
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="formacao.html">Formação</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="#sobreTitle">Sobre</a></li>
+          <li><a href="#formacaoTitle">Formação</a></li>
+          <li><a href="#projetosTitle">Projetos</a></li>
+          <li><a href="#contatoTitle">Contato</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- parte principal do projeto -->
     <main>
-      <section id="inicio">
-        <div id="inicioWrapper">
+      <!-- Página de início -->
+      <section id="inicio" class="flexCentralizado">
+        <div id="inicioWrapper" class="flexCentralizado">
           <div id="inicioText">
             <p>Oi, meu nome é</p>
             <h1>Alessandro Rosario</h1>
@@ -38,13 +46,16 @@
         </div>
       </section>
 
-      <section id="sobre">
-        <div id="sobreWrapper">
+      <!-- Página sobre mim -->
+      <section id="sobre" class="flexCentralizado">
+        <div id="sobreWrapper" class="flexCentralizado">
+          <div id="sobreTitle" class="sectionTitle"><h1>Sobre mim</h1></div>
           <div id="sobreText">
             <p>
               Sou de Curitiba, gosto de inventar coisas, música, computadores e
-              carros. As linguagens e ferramentas que eu estudo e uso:
+              carros.
             </p>
+            <p>As linguagens e ferramentas que eu estudo e uso:</p>
           </div>
           <div id="sobreIcons">
             <div class="icon">
@@ -82,8 +93,91 @@
           </div>
         </div>
       </section>
+
+      <!-- Página de formação -->
+      <section id="formacao" class="flexCentralizado">
+        <div id="formacaoWrapper" class="flexCentralizado">
+          <div id="formacaoTitle" class="sectionTitle"><h1>Formação</h1></div>
+          <div id="formacaoText">
+            <p>
+              Atualmente, estou cursando Análise e Desenvolvimento de Sistemas
+              na Uninter. Além disso, possuo proficiência em inglês no nível C2,
+              garantindo comunicação fluente e compreensão avançada no idioma.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Página de projetos/portfólio -->
+      <section id="projetos" class="flexCentralizado">
+        <div id="projetosWrapper" class="flexCentralizado">
+          <div id="projetosTitle" class="sectionTitle"><h1>Meus projetos</h1></div>
+          <div id="projetosGrid">
+            <div class="projetosItem">
+              <img src="assets/images/code-stock-image.jpg" alt="Projeto 1" />
+              <p>Projeto 1</p>
+            </div>
+            <div class="projetosItem">
+              <img src="assets/images/code-stock-image.jpg" alt="Projeto 2" />
+              <p>Projeto 2</p>
+            </div>
+            <div class="projetosItem">
+              <img src="assets/images/code-stock-image.jpg" alt="Projeto 3" />
+              <p>Projeto 3</p>
+            </div>
+            <div class="projetosItem">
+              <img src="assets/images/code-stock-image.jpg" alt="Projeto 4" />
+              <p>Projeto 4</p>
+            </div>
+            <div class="projetosItem">
+              <img src="assets/images/code-stock-image.jpg" alt="Projeto 5" />
+              <p>Projeto 5</p>
+            </div>
+            <div class="projetosItem">
+              <img src="assets/images/code-stock-image.jpg" alt="Projeto 6" />
+              <p>Projeto 6</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="flexCentralizado">
+        <div id="contatoWrapper" class="flexCentralizado">
+          <div id="contatoTitle" class="sectionTitle"><h1>Entre em contato comigo</h1></div>
+          <form action="#">
+            <div class="inputWrapper">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" />
+            </div>
+            <div class="inputWrapper">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div class="inputWrapper">
+              <label for="mensagem">Mensagem:</label>
+              <textarea id="mensagem" name="mensagem"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
     </main>
 
+    <!-- Rodapé -->
+     <footer>
+      <div class="footerContent"></div>
+        <p>Feito por Alessandro Rosario - 2024</p>
+        <div class="links">
+          <a href="https://github.com/4gora" target="_blank">
+            <img src="assets/icons/github.svg" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/alessandro" target="_blank">
+            <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+     </footer>
+    
     <script src="index.js"></script>
   </body>
 </html>
